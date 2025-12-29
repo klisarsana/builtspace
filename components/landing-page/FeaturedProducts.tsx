@@ -2,8 +2,6 @@ import { ArrowUpRightIcon, StarIcon } from "lucide-react";
 import SectionHeader from "../common/SectionHeader";
 import { Button } from "../ui/button";
 import Link from "next/link";
-<<<<<<< HEAD
-=======
 import ProductCard from "../products/ProductCard";
 
 const featuredProducts = [
@@ -24,7 +22,6 @@ const featuredProducts = [
     isFeatured: false,
   },
 ];
->>>>>>> 1c4b6a6 (Add featured product: product card)
 
 const FeaturedProducts = () => {
   return (
@@ -39,12 +36,6 @@ const FeaturedProducts = () => {
           <Button variant="outline" asChild className="hidden sm:flex">
             <Link href="/explore">
               View All
-<<<<<<< HEAD
-              <ArrowUpRightIcon className="size-4"/>
-            </Link>
-          </Button>
-        </div>
-=======
               <ArrowUpRightIcon className="size-4" />
             </Link>
           </Button>
@@ -54,7 +45,6 @@ const FeaturedProducts = () => {
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
->>>>>>> 1c4b6a6 (Add featured product: product card)
       </div>
     </section>
   );
