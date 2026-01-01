@@ -1,6 +1,10 @@
 
 # builtspace
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 9ceda63895a695443585974e614c0eada90d4e76
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
