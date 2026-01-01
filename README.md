@@ -1,7 +1,6 @@
 
 # builtspace
 =======
->>>>>>> 1c4b6a6 (Add featured product: product card)
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
