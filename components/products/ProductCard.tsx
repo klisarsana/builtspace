@@ -35,14 +35,14 @@ export default function ProductCard({ product }: { product: Product }) {
                 </CardTitle>
                 {product.isFeatured && (
                   <Badge className="gap-1 bg-primary text-primary-foreground">
-                    <StarIcon className="size-3" />
+                    <StarIcon className="size-3 fill-current" />
                     Featured
                   </Badge>
                 )}
               </div>
               <CardDescription>{product.description}</CardDescription>
             </div>
-            {/* Votin BUtton */}
+            {/* Voting Button */}
             <div className="flex flex-col items-center gap-1 shrink-0">
               <Button
                 variant="ghost"
