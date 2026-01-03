@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="border-t bg-muted/20 py-12">
-      <div className="wrapper">BuiltSpace Inc. All rights reserved</div>
+      <div className="wrapper text-center text-muted-foreground">BuiltSpace Inc. All rights reserved</div>
     </footer>
   );
 };
