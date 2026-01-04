@@ -2,9 +2,10 @@ import { CalendarIcon, RocketIcon } from "lucide-react";
 import SectionHeader from "../common/SectionHeader";
 import ProductCard from "../products/ProductCard";
 import EmptyState from "../common/EmptyState";
+import { getRecentlyLaunchedProducts } from "@/lib/products/ProductSelect";
 
-const RecentlyLaunchedProducts = () => {
-  const recentlyLaunchedProducts = [];
+export default async function RecentlyLaunchedProducts() {
+  const recentlyLaunchedProducts = await getRecentlyLaunchedProducts();
 
   return (
     <section className="py-20">
@@ -29,6 +30,4 @@ const RecentlyLaunchedProducts = () => {
       </div>
     </section>
   );
-};
-
-export default RecentlyLaunchedProducts;
+}
