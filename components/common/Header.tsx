@@ -7,14 +7,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-} from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, SignUpButton } from "@clerk/nextjs";
 import { Suspense } from "react";
+import CustomUserButton from "./CustomUserButton";
 
 const Logo = () => {
   return (
@@ -72,7 +67,7 @@ const Header = () => {
                     Submit Project
                   </Link>
                 </Button>
-                <UserButton />
+                <CustomUserButton />
               </SignedIn>
             </Suspense>
           </div>
