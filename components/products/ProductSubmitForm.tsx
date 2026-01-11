@@ -5,6 +5,7 @@ import { FormField } from "../forms/FormField";
 import { Button } from "../ui/button";
 import { addProductAction } from "@/lib/products/ProductAction";
 import { useActionState } from "react";
+import { error } from "console";
 
 const initialState = {
   success: false,
@@ -18,6 +19,8 @@ export default function ProductSubmitForm() {
     initialState
   );
 
+  const { errors, message, success } = state;
+
   return (
     <form className="space-y-6" action={formAction}>
       <FormField
@@ -27,7 +30,7 @@ export default function ProductSubmitForm() {
         placeholder="My Awesome Product"
         required
         onChange={() => {}}
-        error=""
+        error={errors?.name}
       />
       <FormField
         label="Slug"
@@ -36,7 +39,7 @@ export default function ProductSubmitForm() {
         placeholder="my-awesome-project"
         required
         onChange={() => {}}
-        error=""
+        error={errors?.slug}
         helperText="URL-friendly version of your product name"
       />
       <FormField
@@ -46,26 +49,26 @@ export default function ProductSubmitForm() {
         placeholder="A brief, catchy description"
         required
         onChange={() => {}}
-        error=""
+        error={errors?.tagline}
       />
       <FormField
         label="Description"
-        name="descrption"
+        name="description"
         id="description"
         placeholder="Tell us about your product..."
         required
         onChange={() => {}}
-        error=""
+        error={errors?.description}
         textarea
       />
       <FormField
         label="Website URL"
         name="websiteUrl"
-        id="websireUrl"
+        id="websiteUrl"
         placeholder="https://yourproduct.com"
         required
         onChange={() => {}}
-        error=""
+        error={errors?.websiteUrl}
         helperText="Enter your product's website or landing page"
       />
       <FormField
@@ -75,7 +78,7 @@ export default function ProductSubmitForm() {
         placeholder="AI, productivity, SaaS"
         required
         onChange={() => {}}
-        error=""
+        error={errors?.tags}
         helperText="Comma-separated tags (e.g., AI, SaaS, Productivity)"
       />
 
